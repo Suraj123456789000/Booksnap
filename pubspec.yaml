@@ -1,0 +1,45 @@
+name: booksnap
+description: "A new Flutter project."
+publish_to: 'none'  # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  awesome_notifications: ^0.9.3+1
+  intl: ^0.19.0
+  timezone: ^0.9.0
+  firebase_core: ^3.6.0  # Firebase core dependency
+  firebase_auth: ^5.3.1   # Firebase authentication
+  firebase_messaging: ^15.1.3  # Firebase messaging for notifications
+
+  # The following adds the Cupertino Icons font to your application.
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0  # Recommended linting package
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/login_image.png
+    - assets/signup_image.png
+
+  # Optional: Uncomment and modify if you decide to add custom fonts later
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700

@@ -1,0 +1,52 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin" // The Flutter Gradle Plugin
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    namespace "com.yourcompany.book_snap" // Ensure this matches your applicationId
+    compileSdk 34 // Match with the root build.gradle
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.yourcompany.book_snap" // Ensure this is consistent
+        minSdk 23
+        targetSdk 34 // Ensure this matches the compileSdk
+        versionCode 1
+        versionName "1.0"
+    }
+    dependencies {
+  // Import the Firebase BoM
+  implementation platform('com.google.firebase:firebase-bom:33.3.0')
+
+
+  // TODO: Add the dependencies for Firebase products you want to use
+  // When using the BoM, don't specify versions in Firebase dependencies
+  implementation 'com.google.firebase:firebase-analytics'
+
+
+  // Add the dependencies for any other desired Firebase products
+  // https://firebase.google.com/docs/android/setup#available-libraries
+}
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug // Use debug signing for now
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
